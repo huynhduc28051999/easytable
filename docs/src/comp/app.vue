@@ -140,8 +140,9 @@ export default {
         && matched.some(
           x => x.path === `/${this.currentDocLang}${item.path}`,
         )
-      )
+      ) {
         result = 'link-active'
+      }
 
       return result
     },
@@ -168,7 +169,7 @@ export default {
             style="font-size: 20px"
             class="icon iconfont icon-table"
           />
-          &nbsp;vue-easytable
+          &nbsp;vue-vue-table-easy
         </div>
         <!-- menus -->
         <div class="main-banner-menus-container">
@@ -322,7 +323,7 @@ export default {
             <span class="main-banner-menu-item">
               <a
                 class="main-banner-menu-link"
-                href="https://github.com/huangshuwei/vue-easytable"
+                href="https://github.com/huangshuwei/vue-vue-table-easy"
               >
                 <i class="icon iconfont icon-github" />
               </a>

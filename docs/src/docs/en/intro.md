@@ -1,4 +1,4 @@
-## vue-easytable
+## vue-vue-table-easy
 
 Based on vue2.x flexible table components.
 
@@ -66,4 +66,4 @@ Based on vue2.x flexible table components.
 
 ### How to contribute
 
-If you want to contribute,just create a [Pull Request](https://github.com/huangshuwei/vue-easytable/pulls)
+If you want to contribute,just create a [Pull Request](https://github.com/huangshuwei/vue-vue-table-easy/pulls)

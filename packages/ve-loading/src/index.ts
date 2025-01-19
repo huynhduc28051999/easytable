@@ -1,5 +1,5 @@
 import { nextTick } from 'vue'
-import { addClass, removeClass } from '@easytable/common/utils/dom'
+import { addClass, removeClass } from '@vue-table-easy/common/utils/dom'
 import { COMPS_NAME, SPIN_NAMES } from './util/constant'
 import VeLoading from './loading'
 import { clsName } from './util'

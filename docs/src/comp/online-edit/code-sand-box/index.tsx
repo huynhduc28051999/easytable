@@ -7,7 +7,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
-    // vue-easytable version
+    // vue-vue-table-easy version
     version: {
       type: String,
       required: true,
@@ -36,19 +36,19 @@ import Vue from "vue";
 import Example from "./Example.vue";
 
 // import default theme
-import "vue-easytable/libs/theme-default/index.css";
+import "vue-vue-table-easy/libs/theme-default/index.css";
 
-// import vue-easytable library
-import VueEasytable from "vue-easytable";
+// import vue-vue-table-easy library
+import Vuevue-table-easy from "vue-vue-table-easy";
 
 // for online edit
-import "vue-easytable/libs/font/iconfont.css";
+import "vue-vue-table-easy/libs/font/iconfont.css";
 
 // only used by examples
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-Vue.use(VueEasytable);
+Vue.use(Vuevue-table-easy);
 
 Vue.use(ElementUI);
 
@@ -95,12 +95,12 @@ new Vue({
       } = this
 
       const codesandboxPackage = {
-        title: `vue-easytable@${version} example`,
+        title: `vue-vue-table-easy@${version} example`,
         main: 'main.js',
         dependencies: {
           'vue': '^2.6.11',
           'vue-template-compiler': '^2.6.11',
-          'vue-easytable': version,
+          'vue-vue-table-easy': version,
           'element-ui': '^2.15.0',
           'mockjs': '^1.1.0',
           '@vue/cli-service': '4.1.1',

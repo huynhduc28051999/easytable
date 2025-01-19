@@ -1,10 +1,10 @@
 // import Vue from 'vue'
 import { cloneDeep, merge } from 'lodash'
-import defaultLang from '@easytable/common/locale/lang/en-US'
+import defaultLang from '@vue-table-easy/common/locale/lang/en-US'
 import type { InjectionKey, Ref } from 'vue'
 import { Plugin, inject, provide, ref } from 'vue'
-import type { LocaleMessage } from '@easytable/common/locale/types'
-import { withUse } from '@easytable/common/uses/with-use'
+import type { LocaleMessage } from '@vue-table-easy/common/locale/types'
+import { withUse } from '@vue-table-easy/common/uses/with-use'
 
 // const { defineReactive } = Vue.util
 // const proto = Vue.prototype

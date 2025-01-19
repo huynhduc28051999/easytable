@@ -1,5 +1,5 @@
-import emitter from '@easytable/common/mixins/emitter'
-import VeCheckbox from '@easytable/ve-checkbox'
+import emitter from '@vue-table-easy/common/mixins/emitter'
+import VeCheckbox from '@vue-table-easy/ve-checkbox'
 import { COMPS_NAME, EMIT_EVENTS } from '../util/constant'
 import { clsName } from '../util'
 
@@ -45,8 +45,9 @@ export default defineComponent({
       if (
         Array.isArray(disableSelectedRowKeys)
         && disableSelectedRowKeys.includes(rowKey)
-      )
+      ) {
         result = true
+      }
 
       return result
     },
@@ -79,8 +80,9 @@ export default defineComponent({
       if (
         Array.isArray(internalCheckboxSelectedRowKeys)
         && internalCheckboxSelectedRowKeys.includes(rowKey)
-      )
+      ) {
         result = true
+      }
 
       this.isSelected = result
     },

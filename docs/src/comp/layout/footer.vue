@@ -3,8 +3,8 @@
     <div>
       <span>
         <i class="iconfont icon-github" />
-        <a href="https://github.com/huangshuwei/vue-easytable">
-          vue-easytable
+        <a href="https://github.com/huangshuwei/vue-vue-table-easy">
+          vue-vue-table-easy
         </a>
         for Vue2
       </span>
@@ -15,13 +15,13 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span>
         <i class="iconfont icon-github" />
-        <a href="https://github.com/kohaiy/easytable">
-          @easytable/vue
+        <a href="https://github.com/huynhduc28051999/vue-table-easy">
+          @vue-table-easy/vue
         </a>
       </span>
         &nbsp;
       <span>
-        <a href="https://github.com/kohaiy">@kohaiy</a>
+        <a href="https://github.com/huynhduc28051999">@huynhduc28051999</a>
       </span>
     </div>
   </div>

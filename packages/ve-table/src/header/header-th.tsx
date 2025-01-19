@@ -1,7 +1,7 @@
-import VeIcon from '@easytable/ve-icon'
-import { getValByUnit, isEmptyValue } from '@easytable/common/utils'
-import emitter from '@easytable/common/mixins/emitter'
-import { ICON_NAMES } from '@easytable/common/utils/constant'
+import VeIcon from '@vue-table-easy/ve-icon'
+import { getValByUnit, isEmptyValue } from '@vue-table-easy/common/utils'
+import emitter from '@vue-table-easy/common/mixins/emitter'
+import { ICON_NAMES } from '@vue-table-easy/common/utils/constant'
 import {
   clsName,
   getColKeysByHeaderColumn,
@@ -298,7 +298,7 @@ export default defineComponent({
           if (
             (fixed === 'left' && columnIndex > 0)
             || (fixed === 'right'
-            && columnIndex < colgroups.length - 1)
+              && columnIndex < colgroups.length - 1)
           ) {
             totalWidth = getFixedTotalWidthByColumnKey({
               colgroups,
@@ -599,9 +599,10 @@ export default defineComponent({
 
         if (
           this.isSortableCloumn
-            && e.target instanceof HTMLTableCellElement
-        )
+          && e.target instanceof HTMLTableCellElement
+        ) {
           this.sortChange()
+        }
       },
       onDblclick: (e) => {
         this.cellDblclick(e, dblclick)

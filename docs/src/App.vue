@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VeLocale } from '@easytable/vue'
+import { VeLocale } from '@vue-table-easy/vue'
 import { version as latestVersion } from '../../packages/vue/package.json'
 import locale from './comp/locale'
 import useI18n from './comp/mixins/i18n-mixins'
@@ -100,9 +100,9 @@ function themeChange({ value }: Option) {
 function versionChange(item: Option) {
   let { protocol, host, hash } = window.location
   if (!host.includes('github.io'))
-    host = 'kohaiy.github.io'
+    host = 'huynhduc28051999.github.io'
 
-  const newUrl = `${protocol}//${host}/easytable/${item.value}${hash}`
+  const newUrl = `${protocol}//${host}/vue-table-easy/${item.value}${hash}`
   location.href = newUrl
 }
 // go ro router path
@@ -126,8 +126,9 @@ function activeMenuClass(item: any) {
     && matched.some(
       x => x.path === `/${currentDocLang.value}${item.path}`,
     )
-  )
+  ) {
     result = 'link-active'
+  }
 
   return result
 }
@@ -157,7 +158,7 @@ onMounted(() => {
         <!-- logo -->
         <div v-show="showLogo" class="main-banner-logo">
           <i style="font-size: 20px" class="icon iconfont icon-table" />
-          &nbsp;@easytable/vue
+          &nbsp;@vue-table-easy/vue
         </div>
         <!-- menus -->
         <div class="main-banner-menus-container">
@@ -279,7 +280,7 @@ onMounted(() => {
             </span>
 
             <span class="main-banner-menu-item">
-              <a class="main-banner-menu-link" href="https://github.com/kohaiy/easytable">
+              <a class="main-banner-menu-link" href="https://github.com/huynhduc28051999/vue-table-easy">
                 <i class="icon iconfont icon-github" />
               </a>
             </span>

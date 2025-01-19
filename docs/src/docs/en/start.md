@@ -3,13 +3,13 @@
 :::anchor npm & yarn
 
 ```javascript
-npm install vue-easytable
+npm install vue-vue-table-easy
 ```
 
 or
 
 ```javascript
-yarn add vue-easytable
+yarn add vue-vue-table-easy
 ```
 
 :::anchor Usage
@@ -20,10 +20,10 @@ Write the following in main.js：
 
 ```javascript
 import Vue from "vue";
-import "vue-easytable/libs/theme-default/index.css"; // import style
-import VueEasytable from "vue-easytable"; // import library
+import "vue-vue-table-easy/libs/theme-default/index.css"; // import style
+import Vuevue-table-easy from "vue-vue-table-easy"; // import library
 
-Vue.use(VueEasytable);
+Vue.use(Vuevue-table-easy);
 
 new Vue({
     el: "#app",
@@ -31,30 +31,30 @@ new Vue({
 });
 ```
 
-The above code completes the introduction of vue-easytable.Don't forget to import style files.
+The above code completes the introduction of vue-vue-table-easy.Don't forget to import style files.
 
 #### On demand
 
 Write the following in main.js：
 
 ```javascript
-import Vue from "vue";
-import "vue-easytable/libs/theme-default/index.css"; // import style
+import Vue from 'vue'
+import 'vue-vue-table-easy/libs/theme-default/index.css' // import style
 
-import { VeTable, VePagination, VeIcon, VeLoading, VeLocale } from "vue-easytable"; // import library
+import { VeIcon, VeLoading, VeLocale, VePagination, VeTable } from 'vue-vue-table-easy' // import library
 
-Vue.use(VeTable);
-Vue.use(VePagination);
-Vue.use(VeIcon);
-Vue.use(VeLoading);
+Vue.use(VeTable)
+Vue.use(VePagination)
+Vue.use(VeIcon)
+Vue.use(VeLoading)
 
-Vue.prototype.$veLoading = VeLoading;
-Vue.prototype.$veLocale = VeLocale;
+Vue.prototype.$veLoading = VeLoading
+Vue.prototype.$veLocale = VeLocale
 
 new Vue({
-    el: "#app",
-    render: (h) => h(App),
-});
+  el: '#app',
+  render: h => h(App),
+})
 ```
 
 #### Example
@@ -123,15 +123,15 @@ new Vue({
 
 :::anchor Usage By CDN
 
-Through [https://unpkg.com/vue-easytable/](https://unpkg.com/vue-easytable/), you can see the resources of the latest version of Vue easytable,You can also switch versions to select the required resources,You can start using JS and CSS files on the page
+Through [https://unpkg.com/vue-vue-table-easy/](https://unpkg.com/vue-vue-table-easy/), you can see the resources of the latest version of Vue vue-table-easy,You can also switch versions to select the required resources,You can start using JS and CSS files on the page
 
 ```css
 <!-- import style -->
-<link rel="stylesheet" href="https://unpkg.com/vue-easytable/libs/theme-default/index.css">
+<link rel="stylesheet" href="https://unpkg.com/vue-vue-table-easy/libs/theme-default/index.css">
 <!-- import Vue -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <!-- import library -->
-<script src="https://unpkg.com/vue-easytable/libs/umd/index.js"></script>
+<script src="https://unpkg.com/vue-vue-table-easy/libs/umd/index.js"></script>
 ```
 
 #### Example
@@ -144,7 +144,7 @@ Through [https://unpkg.com/vue-easytable/](https://unpkg.com/vue-easytable/), yo
         <!-- import style -->
         <link
             rel="stylesheet"
-            href="https://unpkg.com/vue-easytable/libs/theme-default/index.css"
+            href="https://unpkg.com/vue-vue-table-easy/libs/theme-default/index.css"
         />
     </head>
     <body>
@@ -155,7 +155,7 @@ Through [https://unpkg.com/vue-easytable/](https://unpkg.com/vue-easytable/), yo
     <!-- import Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <!-- import library -->
-    <script src="https://unpkg.com/vue-easytable/libs/umd/index.js"></script>
+    <script src="https://unpkg.com/vue-vue-table-easy/libs/umd/index.js"></script>
     <script>
         new Vue({
             el: "#app",

@@ -1,5 +1,5 @@
-import { getTextContentOfVNode, isBoolean, isEmptyValue, isNumber } from '@easytable/common/utils/index'
-import emitter from '@easytable/common/mixins/emitter'
+import { getTextContentOfVNode, isBoolean, isEmptyValue, isNumber } from '@vue-table-easy/common/utils/index'
+import emitter from '@vue-table-easy/common/mixins/emitter'
 import { clsName, getRowKeysByRangeRowKeys } from '../util'
 
 import {

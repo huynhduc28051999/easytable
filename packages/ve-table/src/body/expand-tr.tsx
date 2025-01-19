@@ -1,4 +1,4 @@
-import emitter from '@easytable/common/mixins/emitter'
+import emitter from '@vue-table-easy/common/mixins/emitter'
 import { clsName } from '../util'
 import { COMPS_NAME } from '../util/constant'
 
@@ -107,14 +107,14 @@ export default defineComponent({
       const { expandOption } = this
       const result
                 = expandOption.render
-                && expandOption.render(
-                  {
-                    row: this.rowData,
-                    column: this.expandColumn,
-                    rowIndex: this.rowIndex,
-                  },
-                  h,
-                )
+                  && expandOption.render(
+                    {
+                      row: this.rowData,
+                      column: this.expandColumn,
+                      rowIndex: this.rowIndex,
+                    },
+                    h,
+                  )
 
       return result
     },

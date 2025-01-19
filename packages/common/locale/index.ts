@@ -1,4 +1,4 @@
-import locale from '@easytable/ve-locale'
+import locale from '@vue-table-easy/ve-locale'
 import { isFunction } from '../utils/index'
 import type { LocaleMessage } from './types'
 

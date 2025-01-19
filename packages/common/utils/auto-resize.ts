@@ -28,7 +28,7 @@ export function autoResize() {
   const resize = function (newChar) {
     if (!newChar)
       newChar = ''
-    else if (!/^[a-zA-Z \.,\\\/\|0-9]$/.test(newChar))
+    else if (!/^[a-z .,\\/|0-9]$/i.test(newChar))
       newChar = '.'
 
     if (text.textContent !== void 0)
@@ -124,7 +124,7 @@ export function autoResize() {
     el = el_
     extendDefaults(config)
 
-    if (el.nodeName === 'TEXTAREA') {
+    if (el.nodeName === 'TEXTAREA' || el.nodeName === 'DIV') {
       el.style.resize = 'none'
       el.style.overflowY = ''
       el.style.height = `${defaults.minHeight}px`

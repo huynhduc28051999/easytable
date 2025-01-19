@@ -1,8 +1,8 @@
 import { defineComponent } from 'vue'
-import VeDropdown from '@easytable/ve-dropdown'
-import VeIcon from '@easytable/ve-icon'
-import { createLocale, isFunction } from '@easytable/common/utils'
-import { ICON_NAMES } from '@easytable/common/utils/constant'
+import VeDropdown from '@vue-table-easy/ve-dropdown'
+import VeIcon from '@vue-table-easy/ve-icon'
+import { createLocale, isFunction } from '@vue-table-easy/common/utils'
+import { ICON_NAMES } from '@vue-table-easy/common/utils/constant'
 import { COMPS_NAME, EMIT_EVENTS, LOCALE_COMP_NAME } from '../util/constant'
 import { clsName, getEmitEventName } from '../util'
 

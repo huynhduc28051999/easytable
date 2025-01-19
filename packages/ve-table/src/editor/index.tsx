@@ -1,9 +1,9 @@
-import { debounce } from 'lodash'
-import emitter from '@easytable/common/mixins/emitter'
-import focus from '@easytable/common/directives/focus.js'
-import { autoResize } from '@easytable/common/utils/auto-resize'
-import { isEmptyValue } from '@easytable/common/utils/index.js'
-import { getCaretPosition, setCaretPosition } from '@easytable/common/utils/dom'
+import debounce from 'lodash/debounce'
+import emitter from '@vue-table-easy/common/mixins/emitter'
+import focus from '@vue-table-easy/common/directives/focus.js'
+import { autoResize } from '@vue-table-easy/common/utils/auto-resize'
+import { isEmptyValue } from '@vue-table-easy/common/utils/index.js'
+import { getCaretPosition, setCaretPosition } from '@vue-table-easy/common/utils/dom'
 import { COMPS_NAME, EMIT_EVENTS, HOOKS_NAME } from '../util/constant'
 import { clsName, getFixedTotalWidthByColumnKey } from '../util'
 import { INSTANCE_METHODS } from './constant'
@@ -112,8 +112,9 @@ export default defineComponent({
       if (
         !isEmptyValue(currentCell.rowKey)
         && !isEmptyValue(currentCell.colKey)
-      )
+      ) {
         result = colgroups.find(x => x.key === currentCell.colKey)
+      }
 
       return result
     },
@@ -215,6 +216,8 @@ export default defineComponent({
         this.isEditCellFocus = false
 
         const { rowKey, colKey } = val
+        this.renderEditCell = this.colgroups.find(col => col.key === colKey)?.renderEditCell
+
         if (!isEmptyValue(rowKey) && !isEmptyValue(colKey)) {
           this.setCellEl()
           // wait for selection cell rendered
@@ -413,7 +416,7 @@ export default defineComponent({
     [INSTANCE_METHODS.TEXTAREA_SELECT]() {
       const textareaInputEl = this.$refs[this.textareaInputRef]
       if (textareaInputEl)
-        textareaInputEl.select()
+        textareaInputEl.select?.()
     },
 
     // textarea add new line
@@ -443,6 +446,10 @@ export default defineComponent({
         setCaretPosition(textareaInputEl, caretPosition + 1)
       }
     },
+    debounceSetTextValue: debounce(function (val) {
+      this.textareaValueChange(val)
+      this.rawCellValue = val
+    }, 500),
   },
   created() {
     // debounce set textarea position
@@ -464,7 +471,8 @@ export default defineComponent({
   destroyed() {
     this.textareaUnObserve()
   },
-  render() {
+
+  render(h) {
     const {
       containerClass,
       containerStyle,
@@ -472,6 +480,8 @@ export default defineComponent({
       rawCellValue,
       isCellEditing,
       isEditCellFocus,
+      editingCell,
+      renderEditCell,
     } = this
 
     const containerProps = {
@@ -486,9 +496,12 @@ export default defineComponent({
       // title: rawCellValue,
       tabindex: -1,
       onInput: (e) => {
-        if (isCellEditing) {
+        if (isCellEditing && editingCell.column.editType !== 'date' && editingCell.column.editType !== 'select') {
           this.textareaValueChange(e.target.value)
           this.rawCellValue = e.target.value
+        }
+        else {
+          this.debounceSetTextValue(e.target.value)
         }
       },
       onClick: () => {
@@ -505,15 +518,42 @@ export default defineComponent({
       },
     }
 
+    const setValue = (val) => {
+      this.textareaValueChange(val)
+      this.rawCellValue = val
+    }
+
     return (
       <div {...containerProps}>
-        <textarea
-          {...textareaProps}
-          v-focus={{
-            focus: isEditCellFocus,
-          }}
-        >
-        </textarea>
+        {typeof renderEditCell === 'function'
+          ? (
+              <div {...textareaProps}>
+                {editingCell.column?.renderEditCell(
+                  h,
+                  {
+                    row: editingCell.row,
+                    rowIndex: editingCell.rowIndex,
+                    column: editingCell.column,
+                    columnIndex: editingCell.columnIndex,
+                    props: textareaProps,
+                    setValue,
+                  },
+                  {
+                    isEditCellFocus,
+                    isCellEditing,
+                  },
+                )}
+              </div>
+            )
+          : (
+              <textarea
+                {...textareaProps}
+                v-focus={{
+                  focus: isEditCellFocus,
+                }}
+              >
+              </textarea>
+            )}
       </div>
     )
   },

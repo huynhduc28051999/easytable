@@ -1,18 +1,18 @@
 {
-  "name": "easytable",
+  "name": "vue-table-easy",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.0.0",
   "description": "",
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/kohaiy/easytable#readme",
+  "homepage": "https://github.com/huynhduc28051999/easytable#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kohaiy/easytable.git"
+    "url": "git+https://github.com/huynhduc28051999/easytable.git"
   },
   "bugs": {
-    "url": "https://github.com/kohaiy/easytable/issues"
+    "url": "https://github.com/huynhduc28051999/easytable/issues"
   },
   "keywords": [],
   "main": "index.js",
@@ -57,7 +57,7 @@
     }
   },
   "resolutions": {
-    "@babel/traverse": "7.17.9"
+    "@babel/traverse": "7.25.0"
   },
   "lint-staged": {
     "*.{ts,tsx,vue}": "eslint . --fix"

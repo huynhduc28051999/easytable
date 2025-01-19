@@ -32,10 +32,10 @@ import {
   // VeSelect,
   useVeTable,
   version,
-// } from '@easytable/vue'
+// } from '@vue-table-easy/vue'
 } from '../../packages/vue/src/index'
 
-// import '@easytable/vue/packages/theme-dark/index.less'
+// import '@vue-table-easy/vue/packages/theme-dark/index.less'
 
 // import './css/table-reset.less'
 

@@ -3,19 +3,19 @@
 :::anchor npm & yarn 安装
 
 ```bash
-npm install @easytable/vue
+npm install @vue-table-easy/vue
 ```
 
 或者
 
 ```bash
-pnpm add @easytable/vue
+pnpm add @vue-table-easy/vue
 ```
 
 或者
 
 ```bash
-yarn add @easytable/vue
+yarn add @vue-table-easy/vue
 ```
 
 :::anchor 使用
@@ -25,44 +25,44 @@ yarn add @easytable/vue
 在 main.js 中写入以下内容：
 
 ```javascript
-import { createApp } from "vue";
+import { createApp } from 'vue'
 // 引入样式
-import "@easytable/vue/libs/theme-default/index.css";
+import '@vue-table-easy/vue/libs/theme-default/index.css'
 // 引入组件库
-import { useVeTable } from "@easytable/vue";
+import { useVeTable } from '@vue-table-easy/vue'
 
 createApp({
-  render: (h) => h(App),
+  render: h => h(App),
 })
-.use(useVeTable())
-.mount('#app')
+  .use(useVeTable())
+  .mount('#app')
 ```
 
-以上代码便完成了 @easytable/vue 的引入。别忘了引入样式文件。
+以上代码便完成了 @vue-table-easy/vue 的引入。别忘了引入样式文件。
 
 #### 按需引入
 
 在 main.js 中写入以下内容：
 
 ```javascript
-import { createApp } from "vue";
+import { createApp } from 'vue'
 // 引入样式
-import "@easytable/vue/libs/theme-default/index.css";
+import '@vue-table-easy/vue/libs/theme-default/index.css'
 // 引入组件库
-import { VeTable, VePagination, VeIcon, VeLoading, VeLocale } from "@easytable/vue";
+import { VeIcon, VeLoading, VeLocale, VePagination, VeTable } from '@vue-table-easy/vue'
 
-Vue.use(VeTable);
-Vue.use(VePagination);
-Vue.use(VeIcon);
-Vue.use(VeLoading);
+Vue.use(VeTable)
+Vue.use(VePagination)
+Vue.use(VeIcon)
+Vue.use(VeLoading)
 
-Vue.prototype.$veLoading = VeLoading;
-Vue.prototype.$veLocale = VeLocale;
+Vue.prototype.$veLoading = VeLoading
+Vue.prototype.$veLocale = VeLocale
 
 new Vue({
-    el: "#app",
-    render: (h) => h(App),
-});
+  el: '#app',
+  render: h => h(App),
+})
 ```
 
 #### 示例
@@ -135,15 +135,15 @@ new Vue({
 
 :::anchor CDN 方式使用
 
-通过 [https://unpkg.com/@easytable/vue/](https://unpkg.com/@easytable/vue/) 可以看到 @easytable/vue 最新版本的资源，也可以切换版本选择需要的资源，在页面上引入 js 和 css 文件即可开始使用：
+通过 [https://unpkg.com/@vue-table-easy/vue/](https://unpkg.com/@vue-table-easy/vue/) 可以看到 @vue-table-easy/vue 最新版本的资源，也可以切换版本选择需要的资源，在页面上引入 js 和 css 文件即可开始使用：
 
 ```html
 <!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/@easytable/vue/libs/theme-default/index.css">
+<link rel="stylesheet" href="https://unpkg.com/@vue-table-easy/vue/libs/theme-default/index.css">
 <!-- 引入Vue -->
 <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 <!-- 引入组件库 -->
-<script src="https://unpkg.com/@easytable/vue/libs/umd/index.js"></script>
+<script src="https://unpkg.com/@vue-table-easy/vue/libs/umd/index.js"></script>
 ```
 
 #### 示例
@@ -156,7 +156,7 @@ new Vue({
         <!-- 引入样式 -->
         <link
             rel="stylesheet"
-            href="https://unpkg.com/@easytable/vue/libs/theme-default/index.css"
+            href="https://unpkg.com/@vue-table-easy/vue/libs/theme-default/index.css"
         />
     </head>
     <body>
@@ -167,10 +167,10 @@ new Vue({
     <!-- 引入 Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
     <!-- 引入组件库 -->
-    <script src="https://unpkg.com/@easytable/vue/libs/umd/easytable-vue.js"></script>
+    <script src="https://unpkg.com/@vue-table-easy/vue/libs/umd/vue-table-easy-vue.js"></script>
     <script>
         const { createApp } = Vue
-        const { useVeTable } = EasytableVue
+        const { useVeTable } = vue-table-easyVue
 
         createApp({
             data: function () {

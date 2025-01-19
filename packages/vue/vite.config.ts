@@ -29,8 +29,8 @@ export default defineConfig({
           globals: {
             vue: 'Vue',
           },
-          name: 'EasytableVue',
-          entryFileNames: 'easytable-vue.js',
+          name: 'vue-table-easyVue',
+          entryFileNames: 'vue-table-easy-vue.js',
           exports: 'named',
         },
         {
@@ -49,7 +49,7 @@ export default defineConfig({
     // 这一块是不会被使用的
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'easytable_vue',
+      name: 'vue-table-easy_vue',
       // formats: ['cjs', 'es'],
     },
   },

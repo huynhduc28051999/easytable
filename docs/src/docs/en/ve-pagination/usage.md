@@ -3,10 +3,10 @@
 import `VePagination`
 
 ```javascript
-import Vue from "vue";
-import { VePagination } from "vue-easytable";
+import Vue from 'vue'
+import { VePagination } from 'vue-vue-table-easy'
 
-Vue.use(VePagination);
+Vue.use(VePagination)
 ```
 
 use

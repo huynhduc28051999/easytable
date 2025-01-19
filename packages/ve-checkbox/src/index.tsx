@@ -1,4 +1,4 @@
-import { injectCheckboxGroup } from '@easytable/ve-checkbox-group'
+import { injectCheckboxGroup } from '@vue-table-easy/ve-checkbox-group'
 import { clsName } from './util'
 import { COMPS_NAME, EMIT_EVENTS } from './util/constant'
 

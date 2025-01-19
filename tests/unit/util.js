@@ -1,13 +1,13 @@
 import { mount } from '@vue/test-utils'
 import { createApp, nextTick } from 'vue'
-import vueEasytable from '../../packages/vue/src/index'
+import vuevue-table-easy from '../../packages/vue/src/index'
 
 /**
  * @typedef {typeof mount}
  */
 export function wrapMount(component, config) {
   return mount({
-    components: vueEasytable,
+    components: vuevue-table-easy,
     ...component,
   }, {
     ...config,
@@ -17,7 +17,7 @@ export function wrapMount(component, config) {
 
 export function getApp(config) {
   return {
-    components: vueEasytable,
+    components: vuevue-table-easy,
     ...config,
   }
 }

@@ -18,8 +18,8 @@ You can use the velocal component to support multiple languages `VeLocal.use` Me
     </div>
 </template>
 <script>
-    import zhCN from "vue-easytable/libs/locale/lang/zh-CN";
-    import enUS from "vue-easytable/libs/locale/lang/en-US";
+    import zhCN from "vue-vue-table-easy/libs/locale/lang/zh-CN";
+    import enUS from "vue-vue-table-easy/libs/locale/lang/en-US";
 
     export default {
         methods: {

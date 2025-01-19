@@ -1,4 +1,4 @@
-import { provideLocale } from '@easytable/ve-locale'
+import { provideLocale } from '@vue-table-easy/ve-locale'
 import type { PropType } from 'vue'
 import type { LocaleMessage } from '../../locale/types'
 

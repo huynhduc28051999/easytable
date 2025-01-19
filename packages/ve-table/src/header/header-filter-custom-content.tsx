@@ -1,7 +1,7 @@
-import VeDropdown from '@easytable/ve-dropdown'
-import VeIcon from '@easytable/ve-icon'
-import { isBoolean, isFunction } from '@easytable/common/utils'
-import { ICON_NAMES } from '@easytable/common/utils/constant'
+import VeDropdown from '@vue-table-easy/ve-dropdown'
+import VeIcon from '@vue-table-easy/ve-icon'
+import { isBoolean, isFunction } from '@vue-table-easy/common/utils'
+import { ICON_NAMES } from '@vue-table-easy/common/utils/constant'
 import { COMPS_NAME } from '../util/constant'
 import { clsName } from '../util'
 
@@ -24,8 +24,9 @@ export default defineComponent({
         if (
           column.filterCustom
           && isBoolean(column.filterCustom.defaultVisible)
-        )
+        ) {
           this.internalVisible = column.filterCustom.defaultVisible
+        }
       },
       immediate: true,
       deep: true,

@@ -1,5 +1,5 @@
-import emitter from '@easytable/common/mixins/emitter'
-import VeRadio from '@easytable/ve-radio'
+import emitter from '@vue-table-easy/common/mixins/emitter'
+import VeRadio from '@vue-table-easy/ve-radio'
 import { COMPS_NAME, EMIT_EVENTS } from '../util/constant'
 import { clsName } from '../util'
 
@@ -43,8 +43,9 @@ export default defineComponent({
       if (
         Array.isArray(disableSelectedRowKeys)
         && disableSelectedRowKeys.includes(rowKey)
-      )
+      ) {
         result = true
+      }
 
       return result
     },

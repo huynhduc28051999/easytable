@@ -64,10 +64,14 @@
                     {
                         field: "date",
                         key: "date",
-                        title: "Date",
+                        title: "Date 1",
                         align: "left",
                         width: "15%",
                         edit: true,
+                        editType: 'date',
+                        renderEditCell: (h, { row, column, props }) => {
+                            return <input type="date" {...props} style="width: 100%; height: 100%" />
+                        }
                     },
                     {
                         field: "hobby",
@@ -76,6 +80,17 @@
                         align: "left",
                         width: "30%",
                         edit: true,
+                        editType: 'select',
+                        renderEditCell: (h, { row, column, setValue, props }) => {
+                            return (
+                                <select name="cars" style="width: 100%; height: 100%" value={props?.value} onChange={e => setValue(e.target.value)}>
+                                    <option value="volvo">volvo</option>
+                                    <option value="saab">saab</option>
+                                    <option value="mercedes">mercedes</option>
+                                    <option value="audi">audi</option>
+                                </select>
+                            )
+                        }
                     },
                     {
                         field: "address",
@@ -91,35 +106,35 @@
                     {
                         name: "John",
                         date: "1900-05-20",
-                        hobby: "coding and coding repeat",
+                        hobby: "volvo",
                         address: "No.1 Century Avenue, Shanghai",
                         rowKey: 0,
                     },
                     {
                         name: "Dickerson",
                         date: "1910-06-20",
-                        hobby: "coding and coding repeat",
+                        hobby: "mercedes",
                         address: "No.1 Century Avenue, Beijing",
                         rowKey: 1,
                     },
                     {
                         name: "Larsen",
                         date: "2000-07-20",
-                        hobby: "coding and coding repeat",
+                        hobby: "mercedes",
                         address: "No.1 Century Avenue, Chongqing",
                         rowKey: 2,
                     },
                     {
                         name: "Geneva",
                         date: "2010-08-20",
-                        hobby: "coding and coding repeat",
+                        hobby: "mercedes",
                         address: "No.1 Century Avenue, Xiamen",
                         rowKey: 3,
                     },
                     {
                         name: "Jami",
                         date: "2020-09-20",
-                        hobby: "coding and coding repeat",
+                        hobby: "mercedes",
                         address: "No.1 Century Avenue, Shenzhen",
                         rowKey: 4,
                     },

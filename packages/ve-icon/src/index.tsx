@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue'
-import { ICON_NAMES } from '@easytable/common/utils/constant'
-import { getValByUnit } from '@easytable/common/utils'
+import { ICON_NAMES } from '@vue-table-easy/common/utils/constant'
+import { getValByUnit } from '@vue-table-easy/common/utils'
 import { COMPS_NAME } from './util/constant'
 
 export default defineComponent({

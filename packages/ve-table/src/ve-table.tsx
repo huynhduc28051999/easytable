@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue'
 import { cloneDeep, debounce } from 'lodash'
-import VeContextmenu from '@easytable/ve-contextmenu'
+import VeContextmenu from '@vue-table-easy/ve-contextmenu'
 import {
   createLocale,
   getValByUnit,
@@ -11,19 +11,19 @@ import {
   isFunction,
   isNumber,
   scrollTo,
-} from '@easytable/common/utils'
-import { KEY_CODES, MOUSE_EVENT_CLICK_TYPE } from '@easytable/common/utils/constant'
-import { getScrollbarWidth } from '@easytable/common/utils/scroll-bar'
+} from '@vue-table-easy/common/utils'
+import { KEY_CODES, MOUSE_EVENT_CLICK_TYPE } from '@vue-table-easy/common/utils/constant'
+import { getScrollbarWidth } from '@vue-table-easy/common/utils/scroll-bar'
 import {
   cancelAnimationTimeout,
   requestAnimationTimeout,
-} from '@easytable/common/utils/request-animation-timeout'
-import Hooks from '@easytable/common/utils/hooks-manager'
-import { getMouseEventClickType } from '@easytable/common/utils/mouse-event'
-import emitter from '@easytable/common/mixins/emitter'
-import clickoutside from '@easytable/common/directives/clickoutside'
-import VueDomResizeObserver from '@easytable/common/comps/resize-observer'
-import { isInputKeyCode } from '@easytable/common/utils/event-key-codes'
+} from '@vue-table-easy/common/utils/request-animation-timeout'
+import Hooks from '@vue-table-easy/common/utils/hooks-manager'
+import { getMouseEventClickType } from '@vue-table-easy/common/utils/mouse-event'
+import emitter from '@vue-table-easy/common/mixins/emitter'
+import clickoutside from '@vue-table-easy/common/directives/clickoutside'
+import VueDomResizeObserver from '@vue-table-easy/common/comps/resize-observer'
+import { isInputKeyCode } from '@vue-table-easy/common/utils/event-key-codes'
 import mitt from 'mitt'
 import {
   cancelColumnFixed,
@@ -719,15 +719,17 @@ export default defineComponent({
 
       const { cellSelectionOption, rowKeyFieldName } = this
 
-      if (isEmptyValue(rowKeyFieldName))
+      if (isEmptyValue(rowKeyFieldName)) {
         result = false
+      }
 
       else if (
         cellSelectionOption
         && isBoolean(cellSelectionOption.enable)
         && cellSelectionOption.enable === false
-      )
+      ) {
         result = false
+      }
 
       return result
     },
@@ -1520,11 +1522,13 @@ export default defineComponent({
         if (
           !isEmptyValue(normalEndCell.rowKey)
           && !isEmptyValue(normalEndCell.colKey)
-        )
+        ) {
           result = CURRENT_CELL_SELECTION_TYPES.RANGE
+        }
 
-        else
+        else {
           result = CURRENT_CELL_SELECTION_TYPES.SINGLE
+        }
       }
 
       this.currentCellSelectionType = result
@@ -1643,6 +1647,12 @@ export default defineComponent({
             else if (ctrlKey) {
               this[INSTANCE_METHODS.STOP_EDITING_CELL]()
             }
+            else if ((currentColumn?.editType === 'date' || currentColumn?.editType === 'select') && !isCellEditing) {
+              this[INSTANCE_METHODS.START_EDITING_CELL]({
+                rowKey,
+                colKey,
+              })
+            }
             // direction down
             else {
               direction = CELL_SELECTION_DIRECTION.DOWN
@@ -1714,7 +1724,6 @@ export default defineComponent({
               this[INSTANCE_METHODS.START_EDITING_CELL]({
                 rowKey,
                 colKey,
-                defaultValue: '',
               })
             }
             break
@@ -1838,14 +1847,14 @@ export default defineComponent({
           if (isVirtualScroll) {
             diff
                             = headerTotalHeight
-                            - (trOffsetTop
-                            - (containerScrollTop - parentOffsetTop))
+                              - (trOffsetTop
+                                - (containerScrollTop - parentOffsetTop))
           }
           else {
             diff
                             = containerScrollTop
-                            + headerTotalHeight
-                            - trOffsetTop
+                              + headerTotalHeight
+                              - trOffsetTop
           }
 
           if (diff > 0)
@@ -1857,17 +1866,17 @@ export default defineComponent({
           if (isVirtualScroll) {
             diff
                             = trOffsetTop
-                            - (containerScrollTop - parentOffsetTop)
-                            + trClientHeight
-                            + footerTotalHeight
-                            - containerClientHeight
+                              - (containerScrollTop - parentOffsetTop)
+                              + trClientHeight
+                              + footerTotalHeight
+                              - containerClientHeight
           }
           else {
             diff
                             = trOffsetTop
-                            + trClientHeight
-                            + footerTotalHeight
-                            - (containerClientHeight + containerScrollTop)
+                              + trClientHeight
+                              + footerTotalHeight
+                              - (containerClientHeight + containerScrollTop)
           }
 
           if (diff >= 0)
@@ -2053,9 +2062,9 @@ export default defineComponent({
       if (start >= 1) {
         const size
                     = this.virtualScrollPositions[start].top
-                    - (this.virtualScrollPositions[start - aboveCount]
-                      ? this.virtualScrollPositions[start - aboveCount].top
-                      : 0)
+                      - (this.virtualScrollPositions[start - aboveCount]
+                        ? this.virtualScrollPositions[start - aboveCount].top
+                        : 0)
         startOffset
                     = this.virtualScrollPositions[start - 1].bottom - size
       }
@@ -2711,8 +2720,9 @@ export default defineComponent({
         if (
           JSON.stringify(colKeys)
           !== JSON.stringify([currentCell.colKey])
-        )
+        ) {
           this.$refs[this.cellSelectionRef].clearCurrentCellRect()
+        }
 
         this.$refs[this.cellSelectionRef].clearNormalEndCellRect()
       }
@@ -2902,8 +2912,9 @@ export default defineComponent({
         editingCell
         && editingCell.rowKey === rowKey
         && editingCell.colKey === colKey
-      )
+      ) {
         return false
+      }
 
       if (isCellEditing)
         this[INSTANCE_METHODS.STOP_EDITING_CELL]()
@@ -3505,8 +3516,9 @@ export default defineComponent({
         || isEmptyValue(startColKey)
         || isEmptyValue(endRowKey)
         || isEmptyValue(endColKey)
-      )
+      ) {
         return false
+      }
 
       this.cellSelectionCurrentCellChange({
         rowKey: startRowKey,
@@ -3705,8 +3717,9 @@ export default defineComponent({
       if (
         editingCell.rowKey === rowKey
         && editingCell.colKey === colKey
-      )
+      ) {
         return false
+      }
 
       const currentColumn = colgroups.find(x => x.key === colKey)
       // 当前列是否可编辑
@@ -4102,7 +4115,7 @@ export default defineComponent({
           {enableCellSelection && <EditInput {...editInputProps} />}
           {/* contextmenu */}
           {(this.enableHeaderContextmenu
-          || this.enableBodyContextmenu) && (
+            || this.enableBodyContextmenu) && (
             <VeContextmenu {...contextmenuProps} />
           )}
           {/* column resizer */}

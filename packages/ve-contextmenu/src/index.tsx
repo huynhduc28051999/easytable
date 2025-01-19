@@ -1,10 +1,10 @@
 import { defineComponent } from 'vue'
-import VeIcon from '@easytable/ve-icon'
+import VeIcon from '@vue-table-easy/ve-icon'
 import { cloneDeep, debounce } from 'lodash'
-import { ICON_NAMES } from '@easytable/common/utils/constant'
-import { getMousePosition, getViewportOffset } from '@easytable/common/utils/dom'
-import { getRandomId } from '@easytable/common/utils/random'
-import eventsOutside from '@easytable/common/directives/events-outside'
+import { ICON_NAMES } from '@vue-table-easy/common/utils/constant'
+import { getMousePosition, getViewportOffset } from '@vue-table-easy/common/utils/dom'
+import { getRandomId } from '@vue-table-easy/common/utils/random'
+import eventsOutside from '@vue-table-easy/common/directives/events-outside'
 import { clsName } from './util/index'
 import {
   COMPS_NAME,

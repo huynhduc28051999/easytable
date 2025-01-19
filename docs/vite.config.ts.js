@@ -11,7 +11,7 @@ const vite_config_default = defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', 'file:///Users/kohai/projects/git/vue-easytable-next/docs/vite.config.ts')),
+      '@': fileURLToPath(new URL('./src', 'file:///Users/kohai/projects/git/vue-vue-table-easy-next/docs/vite.config.ts')),
     },
   },
 })
