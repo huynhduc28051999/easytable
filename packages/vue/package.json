@@ -79,18 +79,18 @@
     "publish": "node ./build/publish.js"
   },
   "dependencies": {
-    "@vue-table-easy/common": "workspace:^1.0.0",
-    "@vue-table-easy/ve-checkbox": "workspace:^1.0.0",
-    "@vue-table-easy/ve-checkbox-group": "workspace:^1.0.0",
-    "@vue-table-easy/ve-contextmenu": "workspace:^1.0.0",
-    "@vue-table-easy/ve-dropdown": "workspace:^1.0.0",
-    "@vue-table-easy/ve-icon": "workspace:^1.0.0",
-    "@vue-table-easy/ve-loading": "workspace:^1.0.0",
-    "@vue-table-easy/ve-locale": "workspace:^1.0.0",
-    "@vue-table-easy/ve-pagination": "workspace:^1.0.0",
-    "@vue-table-easy/ve-radio": "workspace:^1.0.0",
-    "@vue-table-easy/ve-select": "workspace:^1.0.0",
-    "@vue-table-easy/ve-table": "workspace:^1.0.0"
+    "@vue-table-easy/common": "workspace:^",
+    "@vue-table-easy/ve-checkbox": "workspace:^",
+    "@vue-table-easy/ve-checkbox-group": "workspace:^",
+    "@vue-table-easy/ve-contextmenu": "workspace:^",
+    "@vue-table-easy/ve-dropdown": "workspace:^",
+    "@vue-table-easy/ve-icon": "workspace:^",
+    "@vue-table-easy/ve-loading": "workspace:^",
+    "@vue-table-easy/ve-locale": "workspace:^",
+    "@vue-table-easy/ve-pagination": "workspace:^",
+    "@vue-table-easy/ve-radio": "workspace:^",
+    "@vue-table-easy/ve-select": "workspace:^",
+    "@vue-table-easy/ve-table": "workspace:^"
   },
   "devDependencies": {
     "fs-extra": "^11.2.0",

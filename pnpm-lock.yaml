@@ -209,7 +209,7 @@ importers:
   packages/common:
     dependencies:
       '@vue-table-easy/ve-locale':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-locale
       mitt:
         specifier: ^3.0.1
@@ -246,28 +246,28 @@ importers:
   packages/ve-checkbox:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-checkbox-group':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-checkbox-group
 
   packages/ve-checkbox-group:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-checkbox':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-checkbox
 
   packages/ve-contextmenu:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-icon':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-icon
       lodash:
         specifier: ^4.17.21
@@ -280,31 +280,31 @@ importers:
   packages/ve-dropdown:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-checkbox':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-checkbox
       '@vue-table-easy/ve-radio':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-radio
 
   packages/ve-icon:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
 
   packages/ve-loading:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
 
   packages/ve-locale:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       lodash:
         specifier: ^4.17.21
@@ -317,52 +317,52 @@ importers:
   packages/ve-pagination:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-icon':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-icon
       '@vue-table-easy/ve-select':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-select
 
   packages/ve-radio:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
 
   packages/ve-select:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-dropdown':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-dropdown
       '@vue-table-easy/ve-icon':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-icon
 
   packages/ve-table:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-checkbox':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-checkbox
       '@vue-table-easy/ve-contextmenu':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-contextmenu
       '@vue-table-easy/ve-dropdown':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-dropdown
       '@vue-table-easy/ve-icon':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-icon
       '@vue-table-easy/ve-radio':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-radio
       lodash:
         specifier: ^4.17.21
@@ -378,40 +378,40 @@ importers:
   packages/vue:
     dependencies:
       '@vue-table-easy/common':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../common
       '@vue-table-easy/ve-checkbox':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-checkbox
       '@vue-table-easy/ve-checkbox-group':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-checkbox-group
       '@vue-table-easy/ve-contextmenu':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-contextmenu
       '@vue-table-easy/ve-dropdown':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-dropdown
       '@vue-table-easy/ve-icon':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-icon
       '@vue-table-easy/ve-loading':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-loading
       '@vue-table-easy/ve-locale':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-locale
       '@vue-table-easy/ve-pagination':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-pagination
       '@vue-table-easy/ve-radio':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-radio
       '@vue-table-easy/ve-select':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-select
       '@vue-table-easy/ve-table':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^
         version: link:../ve-table
     devDependencies:
       fs-extra:
@@ -7204,7 +7204,7 @@ snapshots:
       fp-ts: 2.16.9
       inferred-types: 0.37.6(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)
       markdown-it: 13.0.2
-      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
+      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitejs/plugin-vue'
@@ -7291,7 +7291,7 @@ snapshots:
       - supports-color
       - terser
 
-  '@yankeeinlondon/link-builder@1.2.1(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))':
+  '@yankeeinlondon/link-builder@1.2.1(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))':
     dependencies:
       '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
       '@yankeeinlondon/happy-wrapper': 2.10.1(jsdom@23.2.0)(less@4.2.1)
@@ -7301,7 +7301,6 @@ snapshots:
       - '@vitest/browser'
       - '@vitest/ui'
       - encoding
-      - happy-dom
       - jsdom
       - less
       - lightningcss
@@ -9768,7 +9767,7 @@ snapshots:
     dependencies:
       '@yankeeinlondon/builder-api': 0.4.1(fp-ts@2.16.9)(inferred-types@0.22.8)(jsdom@23.2.0)(less@4.2.1)(markdown-it@14.1.0)(vite-plugin-md@0.21.5(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1)))
       '@yankeeinlondon/code-builder': 1.2.1(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(rollup@4.31.0)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
-      '@yankeeinlondon/link-builder': 1.2.1(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
+      '@yankeeinlondon/link-builder': 1.2.1(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
       '@yankeeinlondon/meta-builder': 1.4.0(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
       inferred-types: 0.22.8
     transitivePeerDependencies:
@@ -11449,7 +11448,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-md@0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1)):
+  vite-plugin-md@0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1)):
     dependencies:
       '@vitejs/plugin-vue': 4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3))
       '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@4.6.2(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))(vue@3.5.13(typescript@5.3.3)))(happy-dom@8.9.0)(jsdom@23.2.0)(less@4.2.1)(vite@5.4.11(@types/node@18.19.71)(less@4.2.1))
@@ -11463,7 +11462,6 @@ snapshots:
       - '@vitest/browser'
       - '@vitest/ui'
       - encoding
-      - happy-dom
       - jsdom
       - less
       - lightningcss

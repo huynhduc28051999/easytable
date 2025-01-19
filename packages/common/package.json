@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vue-table-easy/ve-locale": "workspace:^1.0.0",
+    "@vue-table-easy/ve-locale": "workspace:^",
     "mitt": "^3.0.1",
     "resize-observer-polyfill": "^1.5.1"
   }

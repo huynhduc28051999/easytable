@@ -10,6 +10,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vue-table-easy/common": "workspace:^1.0.0"
+    "@vue-table-easy/common": "workspace:^"
   }
 }

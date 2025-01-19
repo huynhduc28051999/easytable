@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vue-table-easy/common": "workspace:^1.0.0",
-    "@vue-table-easy/ve-checkbox-group": "workspace:^1.0.0"
+    "@vue-table-easy/common": "workspace:^",
+    "@vue-table-easy/ve-checkbox-group": "workspace:^"
   }
 }
