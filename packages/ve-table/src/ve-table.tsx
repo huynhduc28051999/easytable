@@ -2953,8 +2953,10 @@ export default defineComponent({
     updateEditingCellValue(value) {
       const { editingCell } = this
       const { row, column } = editingCell
-      row[column.field] = value
-      this.editingCell.row = row
+      if (row && column) {
+        row[column.field] = value
+        this.editingCell.row = row
+      }
     },
 
     /*
