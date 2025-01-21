@@ -3243,6 +3243,7 @@ export default defineComponent({
         paste,
         beforePaste: beforePasteCallback,
         afterPaste: afterPasteCallback,
+        processDataPaste,
       } = clipboardOption || {}
 
       if (isBoolean(paste) && !paste)
@@ -3267,6 +3268,10 @@ export default defineComponent({
           const allowPasting = beforePasteCallback(response)
           if (isBoolean(allowPasting) && !allowPasting)
             return false
+        }
+
+        if (isFunction(processDataPaste)) {
+          response.data = processDataPaste(response.data)
         }
         // change table cell data
         onAfterPaste({

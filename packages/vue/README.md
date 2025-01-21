@@ -86,15 +86,15 @@ yarn add @vue-table-easy/vue
 Write the following in main.js:
 
 ```javascript
-import { createApp } from 'vue'
-import '@vue-table-easy/vue/libs/theme-default/index.css'
-import { useVeTable } from '@vue-table-easy/vue'
+import { createApp } from 'vue';
+import '@vue-table-easy/vue/libs/theme-default/index.css';
+import { useVeTable } from '@vue-table-easy/vue';
 
 createApp({
-  render: h => h(App),
+  render: (h) => h(App),
 })
-  .use(useVeTable())
-  .mount('#app')
+.use(useVeTable())
+.mount('#app');
 ```
 
 Example:
@@ -154,7 +154,7 @@ Example:
 
 ## 开发计划
 
-[正在做的事情](https://github.com/huynhduc28051999/vue-table-easy/projects)
+[正在做的事情](https://github.com/huynhduc28051999/easytable/projects)
 
 ## 支持环境
 
@@ -167,11 +167,11 @@ Example:
 ## 如何贡献
 
 如果你希望参与贡献，欢迎
-[Pull Request](https://github.com/huynhduc28051999/vue-table-easy/pulls)
+[Pull Request](https://github.com/huynhduc28051999/easytable/pulls)
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=huynhduc28051999/vue-table-easy&type=Date)](https://star-history.com/#huynhduc28051999/vue-table-easy&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=huynhduc28051999/easytable&type=Date)](https://star-history.com/#huynhduc28051999/easytable&Date)
 
 ## 贡献者们
 
@@ -179,8 +179,8 @@ Example:
 
 同时感谢以下小伙伴们做出的贡献 🙏
 
-<a href="https://github.com/huynhduc28051999/vue-table-easy/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=huynhduc28051999/vue-table-easy" />
+<a href="https://github.com/huynhduc28051999/easytable/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=huynhduc28051999/easytable" />
 </a>
 
 ## License
