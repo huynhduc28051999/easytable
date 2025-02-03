@@ -21,7 +21,7 @@ export default {
     removeRow: '$1 行を削除',
     emptyRow: '$1 行をクリア',
     // removeColumn: "Remove column",
-    emptyColumn: '$列をクリア',
+    emptyColumn: '$1列をクリア',
     // hideColumn: "Hide column",
     emptyCell: 'セルをクリア',
     leftFixedColumnTo: '左固定列に',
