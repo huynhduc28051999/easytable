@@ -2279,9 +2279,7 @@ export default defineComponent({
       this.clearBodyIndicatorRowKeys()
 
       // stop editing cell
-      setTimeout(() => {
-        this[INSTANCE_METHODS.STOP_EDITING_CELL]()
-      }, 200)
+      this[INSTANCE_METHODS.STOP_EDITING_CELL]()
     },
 
     // save cell when stop editing
