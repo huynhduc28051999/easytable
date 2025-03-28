@@ -1652,11 +1652,16 @@ export default defineComponent({
                 rowKey,
                 colKey,
               })
-            }
+            } if (isCellEditing) {
             // direction down
-            else {
               direction = CELL_SELECTION_DIRECTION.DOWN
               this[INSTANCE_METHODS.STOP_EDITING_CELL]()
+            }
+            else {
+              this[INSTANCE_METHODS.START_EDITING_CELL]({
+                rowKey,
+                colKey,
+              })
             }
 
             if (direction) {
@@ -1721,9 +1726,15 @@ export default defineComponent({
           default: {
             // enter text directly
             if (isInputKeyCode(event)) {
+              let defaultValue = '' as string | undefined
+              if ((currentColumn?.editType === 'date' || currentColumn?.editType === 'select') && !isCellEditing) {
+                defaultValue = undefined
+              }
+
               this[INSTANCE_METHODS.START_EDITING_CELL]({
                 rowKey,
                 colKey,
+                defaultValue,
               })
             }
             break

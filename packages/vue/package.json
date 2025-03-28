@@ -1,6 +1,6 @@
 {
   "name": "vue3-table-easy",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "description": "Vue table component",
   "author": "https://github.com/huynhduc28051999",
   "license": "MIT",
@@ -100,8 +100,8 @@
   },
   "docVersions": [
     {
-      "label": "0.0.10",
-      "value": "0.0.10"
+      "label": "0.0.12",
+      "value": "0.0.12"
     }
   ]
 }

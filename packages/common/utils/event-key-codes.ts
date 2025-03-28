@@ -4,9 +4,12 @@ export function isInputKeyCode(event: KeyboardEvent) {
 
   const { keyCode, altKey, ctrlKey, shiftKey, metaKey } = event
 
-  // exclude keys
-  if (altKey || ctrlKey || shiftKey || metaKey)
-    return result
+  if (shiftKey && keyCode >= 65 && keyCode <= 90) {
+    result = true
+  }
+  else if (altKey || ctrlKey || shiftKey || metaKey) { // exclude keys
+    return false
+  }
 
   // Digit0 to Digit9
   if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 96 && keyCode <= 105)) {
